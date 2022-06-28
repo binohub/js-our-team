@@ -33,4 +33,7 @@ const teamMembers = [
 
 for (let i=0; i<teamMembers.length; i++){
     console.log(teamMembers[i]);
+    console.log(teamMembers[i].nome);
+    console.log(teamMembers[i]["ruolo"]);
+    console.log(teamMembers[i]["img-src"]);
 }
