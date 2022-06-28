@@ -35,11 +35,12 @@ const teamMembers = [
 
 const parentInfo = document.getElementById('parent-info');
 for (let i=0; i<teamMembers.length; i++){
-    console.log(teamMembers[i]);
-    console.log(teamMembers[i].nome);
-    console.log(teamMembers[i]["ruolo"]);
-    console.log(teamMembers[i]["img-src"]);
+    // console.log(teamMembers[i]);
+    // console.log(teamMembers[i].nome);
+    // console.log(teamMembers[i]["ruolo"]);
+    // console.log(teamMembers[i]["img-src"]);
 
+    functionNewCard();
     const newCard = document.createElement("div");
     newCard.classList.add("card", "mx-2");
     const newImg = document.createElement("img");
@@ -52,8 +53,11 @@ for (let i=0; i<teamMembers.length; i++){
     <p class="card-text">${teamMembers[i]["ruolo"]}</p>`
     newCard.append(cardBody);
 
+    //? newPre.innerHTML = `${teamMembers[i].nome}, ${teamMembers[i].ruolo}, ${teamMembers[i]["img-src"]}`
 
-
-    // newPre.innerHTML = `${teamMembers[i].nome}, ${teamMembers[i].ruolo}, ${teamMembers[i]["img-src"]}`
     parentInfo.append(newCard);
+}
+
+function functionNewCard(){
+    console.log("crea una nuova card");
 }
