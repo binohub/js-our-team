@@ -31,9 +31,16 @@ const teamMembers = [
     },
 ];
 
+
+
+const parentInfo = document.getElementById('parent-info');
 for (let i=0; i<teamMembers.length; i++){
     console.log(teamMembers[i]);
     console.log(teamMembers[i].nome);
     console.log(teamMembers[i]["ruolo"]);
     console.log(teamMembers[i]["img-src"]);
+
+    const newPre = document.createElement("pre");
+    newPre.innerHTML = `${teamMembers[i].nome}, ${teamMembers[i].ruolo}, ${teamMembers[i]["img-src"]}`
+    parentInfo.append(newPre);
 }
